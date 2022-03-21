@@ -5,8 +5,18 @@
     padding: 0;
 }
 
-body {
+@font-face {
+    font-family: poppins;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+}
 
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&family=VT323&display=swap');
+}
+
+body {
+    background-color: rgb(236, 236, 236);
 }
 
 /* Header Section */
@@ -15,15 +25,16 @@ header {
     justify-content: space-between;
     align-items: center;
     padding:10px 1%;
-    background-color: purple;
+    background-color: black;
+    border-bottom: solid 5px rgb(35, 147, 151);
 }
 
 header h1 {
     display: inline-block;
     color: white;
-    background-color: black;
+    background-color: rgb(35, 147, 151);
     width: 300px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Press Start 2P';
     padding-left: 50px;
     text-align: end;
     padding-right: 15px;
@@ -44,7 +55,7 @@ header h1 {
 }
 
 .nav_links li a:hover {
-    color: red;
+    color: rgb(35, 147, 151);
 }
 
 li, a {
@@ -61,11 +72,36 @@ li, a {
 
 }
 
-/* Main Sections */
+/* Main Sections - Flex Everything or Inline Block with flex or inline-block within?*/
 
-section {
-    background-color: green;
+.section-container {
+    background-color: rgb(35, 147, 151);
+    color: rgb(7, 7, 7);
+    padding: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 5fr;
 }
+
+.title-card {
+    border-right: 2px solid black;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    flex-flow: row, wrap;
+    font-size: 30px;
+}
+
+.display-card {
+    text-align: center;
+    color: white;
+    padding-left: 10px;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+
+}
+
 
 .work-card-container {
     background-color: yellow;
@@ -100,3 +136,22 @@ section {
     width: 200px;
     margin-bottom: 20px;
 }
+
+footer>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+footer>ul>a:hover {
+    color: black;
+}
+
+/* Media Querie Notes
+At phone width, make content-title classes display over display-card class.
+change border-right to border-bottom.  Text-align and Flex center.
+Switch contact information links to flex-column*/
