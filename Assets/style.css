@@ -10,11 +10,6 @@
     src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 }
 
-@font-face {
-    font-family: 'Press Start 2P';
-    src: url('https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&family=VT323&display=swap');
-}
-
 body {
     background-color: rgb(236, 236, 236);
 }
@@ -24,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px 1%;
+    padding: 20px 1%;
     background-color: black;
     border-bottom: solid 5px rgb(35, 147, 151);
 }
@@ -33,11 +28,14 @@ header h1 {
     display: inline-block;
     color: white;
     background-color: rgb(35, 147, 151);
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px #F58311;
     width: 300px;
-    font-family: 'Press Start 2P';
-    padding-left: 50px;
-    text-align: end;
-    padding-right: 15px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px
 }
 
 /* Nav Bar */
@@ -50,6 +48,7 @@ header h1 {
     padding: 1px 5px; 
     position: relative;
     top: 5px;
+    font-family: poppins;
     color: white;
     text-decoration: none;
 }
@@ -63,55 +62,87 @@ li, a {
 }
 
 /* Hero Image and Text */
-
-.hero-image {
-
+.profile-headshot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: poppins;
+    color: white;
+    font-weight: bold;
+    padding: 20px 10px;
+    margin: 15px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: rgb(35, 147, 151);
+    box-shadow: 10px 10px #F58311;
+    
 }
 
-.hero-subtitle {
 
+.profile-headshot img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 100px;
+    margin: 20px;
+    display: inline-block;
 }
+
+
 
 /* Main Sections - Flex Everything or Inline Block with flex or inline-block within?*/
 
 .section-container {
     background-color: rgb(35, 147, 151);
     color: rgb(7, 7, 7);
-    padding: 2rem;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 5fr;
+    border: 2px solid black;
+    margin: 0px 20px;
+    box-shadow: 10px 10px #F58311;
+    border-radius: 50px;
+    
 }
 
 .title-card {
     border-right: 2px solid black;
-    color: black;
+    color: white;
     padding: 20px;
     display: flex;
     justify-content: flex-end;
     text-align: end;
     flex-flow: row, wrap;
     font-size: 30px;
+    font-family: "Audiowide", sans-serif;
+}
+
+.title-card:hover {
+    color: #F58311;
 }
 
 .display-card {
     text-align: center;
     color: white;
-    padding-left: 10px;
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
     font-family: poppins, Arial, Helvetica, sans-serif;
 
 }
 
 
 .work-card-container {
-    background-color: yellow;
+    background-color: white;
     border: 5px solid;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-
-
+    margin: 20px;
+    border-radius: 5px;
 }
 
 .work-card {
@@ -119,23 +150,69 @@ li, a {
 }
 
 .main-project {
-    background-color: orange;
-    outline: 2px dashed;
+    background-image: url('./surf_wave.avif');
+    background-color: white;
+    box-shadow: 0px 10px black;
+    background-size: 100;
+    background-position: center;
+    background-repeat: no-repeat;
     order: -1;
     flex-grow: 1;
-    margin-bottom: 20px;
     height: 300px;
-    width: 100%;
+    width: 90%;
+    
 }
 
-.small-project {
-    background-color: pink;
-    outline: 2px dotted;
-    margin: 5px;
+.card-content {
+    color: black;
+    background-color: white;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.main-project:hover {
+    opacity: .5;
+    box-shadow: 0px 10px #F58311;
+}
+
+.small-card {
+    background-color: white;
+    background-size: 100;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: 2px solid black;
+    margin: 30px 20px;
     height: 200px;
     width: 200px;
-    margin-bottom: 20px;
+    box-shadow: 10px 10px #888888;
 }
+
+.small-card:hover {
+    opacity: .5;
+    box-shadow: 10px 10px #F58311;
+}
+
+.small-project-1 {
+    background-image: url('./surf_wave.avif');
+
+}
+
+.small-project-2 {
+    background-image: url('./surf_wave.avif');
+
+}
+
+.small-project-3 {
+    background-image: url('./surf_wave.avif');
+   
+}
+
+.small-project-4 {
+    background-image: url('./surf_wave.avif');
+ 
 
 footer>ul {
     display: flex;
@@ -155,3 +232,6 @@ footer>ul>a:hover {
 At phone width, make content-title classes display over display-card class.
 change border-right to border-bottom.  Text-align and Flex center.
 Switch contact information links to flex-column*/
+
+/* nav bar to align below header h1 */
+
