@@ -1,13 +1,8 @@
-/* Retro Theme Colors from Coolers.io */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-@font-face {
-    font-family: poppins;
-    src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 }
 
 body {
@@ -61,7 +56,7 @@ li, a {
     list-style-type: none;
 }
 
-/* Hero Image and Text */
+/* Profile Image and Text */
 .profile-headshot {
     display: flex;
     flex-direction: column;
@@ -72,7 +67,7 @@ li, a {
     color: white;
     font-weight: bold;
     padding: 20px 10px;
-    margin: 15px 20px;
+    margin: 30px 20px;
     border: 2px solid black;
     border-radius: 50px;
     background-color: rgb(35, 147, 151);
@@ -90,9 +85,7 @@ li, a {
     display: inline-block;
 }
 
-
-
-/* Main Sections - Flex Everything or Inline Block with flex or inline-block within?*/
+/* /* Main Sections  */
 
 .section-container {
     background-color: rgb(35, 147, 151);
@@ -101,10 +94,11 @@ li, a {
     grid-gap: 1rem;
     grid-template-columns: 1fr 5fr;
     border: 2px solid black;
-    margin: 0px 20px;
     box-shadow: 10px 10px #F58311;
     border-radius: 50px;
-    
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 25px;
 }
 
 .title-card {
@@ -124,15 +118,16 @@ li, a {
 }
 
 .display-card {
-    text-align: center;
+    text-align: left;
     color: white;
     padding-right: 20px; 
-    padding-top: 10px; 
+    padding-top: 20px; 
     padding-bottom: 10px;
     font-family: poppins, Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    margin-top: 10px;
 
 }
-
 
 .work-card-container {
     background-color: white;
@@ -142,24 +137,23 @@ li, a {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px;
-    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 25px;
+    border-radius: 5px; 
 }
 
-.work-card {
-    background-color: grey;
-}
 
 .main-project {
-    background-image: url('./surf_wave.avif');
+    background-image: url('./Images/surf_wave.avif');
     background-color: white;
     box-shadow: 0px 10px black;
-    background-size: 100;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     order: -1;
     flex-grow: 1;
     height: 300px;
-    width: 90%;
+    width: 200%;
     
 }
 
@@ -185,9 +179,10 @@ li, a {
     background-repeat: no-repeat;
     outline: 2px solid black;
     margin: 30px 20px;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     box-shadow: 10px 10px #888888;
+    border-radius: 5px;
 }
 
 .small-card:hover {
@@ -196,42 +191,75 @@ li, a {
 }
 
 .small-project-1 {
-    background-image: url('./surf_wave.avif');
+    background-image: url(./Images/construction_product.avif)
 
 }
 
 .small-project-2 {
-    background-image: url('./surf_wave.avif');
+    background-image: url(./Images/solana\ app\ background.avif);
 
 }
 
 .small-project-3 {
-    background-image: url('./surf_wave.avif');
+    background-image: url(./Images/productivity\ app.avif);
    
 }
 
 .small-project-4 {
-    background-image: url('./surf_wave.avif');
- 
+    background-image: url(./Images/photo-1620321023374-d1a68fbc720d.jpeg);
+}
 
 footer>ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 50px;
     align-items: center;
     font-family: monospace;
     font-size: 15px;
+    
 }
 
-footer>ul>a:hover {
-    color: black;
+footer>ul>li>a:hover {
+    font-size: 20px;
+    color: #F58311;
+    text-decoration: underline;
 }
+
+@media only screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+    }
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-card {
+        border-right: 0px solid black;
+        border-bottom: 2px dashed whitesmoke;
+        text-align: center;
+        justify-content: center;
+    }
+    .display-card {
+        justify-content: center;
+        padding: 25px;
+    }
+    footer>ul {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 20px;
+    }
+
+  }
 
 /* Media Querie Notes
-At phone width, make content-title classes display over display-card class.
-change border-right to border-bottom.  Text-align and Flex center.
-Switch contact information links to flex-column*/
+1) Stack nav-bar under h1
+2) Stack Title Card over Diplay Card
+3) Change Title Card border-right to border-bottom. Text-align center. Justify-content center.
+3) Stack Title Card over Work Card Container
+4) Stack Title Card over footer>ul
+5) Make footer>ul display as standard list. flex column, justify center?
 
-/* nav bar to align below header h1 */
 
