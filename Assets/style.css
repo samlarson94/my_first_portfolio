@@ -144,7 +144,7 @@ li, a {
 
 
 .main-project {
-    background-image: url('./Images/surf_wave.avif');
+    background-image: url('./Images/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg');
     background-color: white;
     box-shadow: 0px 10px black;
     background-size: 100%;
@@ -154,7 +154,6 @@ li, a {
     flex-grow: 1;
     height: 300px;
     width: 200%;
-    
 }
 
 .card-content {
@@ -190,9 +189,9 @@ li, a {
     box-shadow: 10px 10px #F58311;
 }
 
-.small-project-1 {
-    background-image: url(./Images/construction_product.avif)
-
+.laughandpour {
+    background-image: url(./Images/Laughing\ Bartender.png);
+    background-size: contain;
 }
 
 .small-project-2 {
@@ -200,13 +199,15 @@ li, a {
 
 }
 
-.small-project-3 {
-    background-image: url(./Images/productivity\ app.avif);
+.weatherapp {
+    background-image: url(./Images/tasos-mansour-_hGPdpyMV-8-unsplash.jpg);
+    background-size: 150%;
    
 }
 
-.small-project-4 {
-    background-image: url(./Images/photo-1620321023374-d1a68fbc720d.jpeg);
+.passwordgen{
+    background-image: url(./Images/jason-dent-3wPJxh-piRw-unsplash.jpg);
+    background-size: contain;
 }
 
 footer>ul {
