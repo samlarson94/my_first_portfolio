@@ -189,13 +189,18 @@ li, a {
     box-shadow: 10px 10px #F58311;
 }
 
+.space-info {
+    background-image: url(./Images/martian-background.jpeg);
+}
+
 .laughandpour {
     background-image: url(./Images/Laughing\ Bartender.png);
     background-size: contain;
 }
 
-.small-project-2 {
-    background-image: url(./Images/solana\ app\ background.avif);
+.golf-tracker {
+    background-image: url(./Images/golf-tracker.png);
+    /* background-size: 70%; */
 
 }
 
@@ -208,6 +213,10 @@ li, a {
 .passwordgen{
     background-image: url(./Images/jason-dent-3wPJxh-piRw-unsplash.jpg);
     background-size: contain;
+}
+
+.resume-title {
+    font-weight: bolder;
 }
 
 footer>ul {
